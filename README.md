@@ -36,22 +36,17 @@ git clone https://github.com/YOUR_USERNAME/auth-system.git
 cd auth-system
 2. Install dependencies
 bash
-Copy
-Edit
+
 npm install
 3. Add environment variables
 Create a .env file in the root directory:
 
 env
-Copy
-Edit
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 4. Run the server
 bash
-Copy
-Edit
 npm start
 Server runs at: http://localhost:5000
 
@@ -66,8 +61,6 @@ POST /api/auth/register
 Body:
 
 json
-Copy
-Edit
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -78,8 +71,6 @@ POST /api/auth/login
 Body:
 
 json
-Copy
-Edit
 {
   "email": "john@example.com",
   "password": "password123"
@@ -89,8 +80,6 @@ POST /api/auth/reset-password
 Body:
 
 json
-Copy
-Edit
 {
   "email": "john@example.com"
 }
@@ -107,8 +96,6 @@ The backend is fully modular and scalable.
 This project is licensed under the MIT License.
 
 yaml
-Copy
-Edit
 
 ---
 
