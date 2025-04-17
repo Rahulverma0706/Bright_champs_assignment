@@ -1,6 +1,8 @@
 # User Authentication System
 
-A secure and minimal user authentication system built with Node.js, Express, and MongoDB using JWT.
+A secure user authentication system built with Node.js, Express, and MongoDB using JWT.
+
+✅ **Live Demo**: https://bright-champs-assignment.onrender.com
 
 ## Features
 
@@ -9,19 +11,20 @@ A secure and minimal user authentication system built with Node.js, Express, and
 - Password Reset
 - JWT-based Authentication
 - Password Hashing with bcryptjs
-- Input Validation with express-validator
+- Input Validation using express-validator
 
 ## Tech Stack
 
 - Node.js
 - Express.js
-- MongoDB + Mongoose
+- MongoDB (via MongoDB Atlas)
+- Mongoose
 - JWT
 - bcryptjs
 - express-validator
 - dotenv
 
-## Setup Instructions
+## Setup Instructions (Local Development)
 
 1. Clone the repository:
 
@@ -44,42 +47,72 @@ A secure and minimal user authentication system built with Node.js, Express, and
 
    Server will run at: http://localhost:5000
 
+## Deployed Version (Render)
+
+This project is deployed on Render.
+
+🌐 **Base URL**: https://bright-champs-assignment.onrender.com
+
 ## API Endpoints
 
-### ➤ Register
+### 🔹 Register a new user
 
 - **POST** `/api/auth/register`  
-- **Body**:
-  {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
-  }
+- **Request Body**:
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+🔹 Login
+POST /api/auth/login
 
-### ➤ Login
+Request Body:
 
-- **POST** `/api/auth/login`  
-- **Body**:
-  {
-    "email": "john@example.com",
-    "password": "password123"
-  }
+json
+Copy
+Edit
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+🔹 Reset Password
+POST /api/auth/reset-password
 
-### ➤ Reset Password
+Request Body:
 
-- **POST** `/api/auth/reset-password`  
-- **Body**:
-  {
-    "email": "john@example.com"
-  }
+json
+Copy
+Edit
+{
+  "email": "john@example.com"
+}
+Notes
+Input validation is done using express-validator.
 
-## Notes
+Passwords are hashed securely using bcryptjs.
 
-- All inputs are validated using `express-validator`.
-- Passwords are hashed using `bcryptjs`.
-- JWT is used to manage user sessions securely.
-- Extendable with protected routes and email services.
+JWT is used to manage authenticated sessions.
 
-## License
+Can be extended with protected routes and email integration.
 
+License
 MIT
+
+yaml
+Copy
+Edit
+
+---
+
+✅ You're all set to paste this into your `README.md` on GitHub.
+
+Let me know if you want a frontend added, protected routes example, or deployment tips for production!
+
+
+
+
+
+
+
