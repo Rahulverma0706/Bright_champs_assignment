@@ -1,118 +1,67 @@
-# User Authentication System
-
+User Authentication System
 A secure user authentication system built with Node.js, Express, and MongoDB using JWT.
 
-✅ **Live Demo**: https://bright-champs-assignment.onrender.com
+Live Demo: https://bright-champs-assignment.onrender.com
 
-## Features
+Features
+User Registration
 
-- User Registration
-- User Login
-- Password Reset
-- JWT-based Authentication
-- Password Hashing with bcryptjs
-- Input Validation using express-validator
+User Login
 
-## Tech Stack
+Password Reset
 
-- Node.js
-- Express.js
-- MongoDB (via MongoDB Atlas)
-- Mongoose
-- JWT
-- bcryptjs
-- express-validator
-- dotenv
+JWT-based Authentication
 
-## Setup Instructions (Local Development)
+Password Hashing with bcryptjs
 
-1. Clone the repository:
+Input Validation using express-validator
 
-   git clone https://github.com/YOUR_USERNAME/auth-system.git  
-   cd auth-system
+Tech Stack
+Node.js, Express.js, MongoDB (via MongoDB Atlas), Mongoose, JWT, bcryptjs, express-validator, dotenv
 
-2. Install dependencies:
+Setup Instructions (Local Development)
+Clone the repository:
+git clone https://github.com/YOUR_USERNAME/auth-system.git
+cd auth-system
 
-   npm install
+Install dependencies:
+npm install
 
-3. Create a `.env` file in the root directory with the following:
+Create a .env file in the root directory with the following:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 
-   PORT=5000  
-   MONGO_URI=your_mongodb_connection_string  
-   JWT_SECRET=your_jwt_secret
+Start the server:
+npm start
+Server will run at: http://localhost:5000
 
-4. Start the server:
+Deployed Version
+Hosted on Render:
+Base URL: https://bright-champs-assignment.onrender.com
 
-   npm start
+API Endpoints
+Register a new user
+POST /api/auth/register
+Body: { "name": "John Doe", "email": "john@example.com", "password": "password123" }
 
-   Server will run at: http://localhost:5000
-
-## Deployed Version (Render)
-
-This project is deployed on Render.
-
-🌐 **Base URL**: https://bright-champs-assignment.onrender.com
-
-## API Endpoints
-
-### 🔹 Register a new user
-
-- **POST** `/api/auth/register`  
-- **Request Body**:
-```json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "password123"
-}
-🔹 Login
+Login
 POST /api/auth/login
+Body: { "email": "john@example.com", "password": "password123" }
 
-Request Body:
-
-json
-Copy
-Edit
-{
-  "email": "john@example.com",
-  "password": "password123"
-}
-🔹 Reset Password
+Reset Password
 POST /api/auth/reset-password
+Body: { "email": "john@example.com" }
 
-Request Body:
-
-json
-Copy
-Edit
-{
-  "email": "john@example.com"
-}
 Notes
-Input validation is done using express-validator.
+All inputs are validated using express-validator
 
-Passwords are hashed securely using bcryptjs.
+Passwords are securely hashed using bcryptjs
 
-JWT is used to manage authenticated sessions.
+JWT is used for secure session handling
 
-Can be extended with protected routes and email integration.
+Easily extendable with protected routes and email functionality
 
 License
 MIT
-
-yaml
-Copy
-Edit
-
----
-
-✅ You're all set to paste this into your `README.md` on GitHub.
-
-Let me know if you want a frontend added, protected routes example, or deployment tips for production!
-
-
-
-
-
-
 
