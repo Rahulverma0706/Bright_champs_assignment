@@ -1,67 +1,117 @@
-User Authentication System
+# User Authentication System
+
 A secure user authentication system built with Node.js, Express, and MongoDB using JWT.
 
-Live Demo: https://bright-champs-assignment.onrender.com
+🔗 **Live Demo**: [https://bright-champs-assignment.onrender.com](https://bright-champs-assignment.onrender.com)
 
-Features
-User Registration
+---
 
-User Login
+## 🚀 Features
 
-Password Reset
+- ✅ User Registration  
+- 🔐 User Login  
+- 🔁 Password Reset  
+- 🛡️ JWT-based Authentication  
+- 🔒 Password Hashing with bcryptjs  
+- ✅ Input Validation using express-validator  
 
-JWT-based Authentication
+---
 
-Password Hashing with bcryptjs
+## 🛠 Tech Stack
 
-Input Validation using express-validator
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB with Mongoose  
+- **Authentication**: JWT, bcryptjs  
+- **Validation**: express-validator  
+- **Environment Management**: dotenv  
 
-Tech Stack
-Node.js, Express.js, MongoDB (via MongoDB Atlas), Mongoose, JWT, bcryptjs, express-validator, dotenv
+---
 
-Setup Instructions (Local Development)
-Clone the repository:
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/YOUR_USERNAME/auth-system.git
 cd auth-system
-
-Install dependencies:
+2. Install dependencies
+bash
+Copy
+Edit
 npm install
+3. Add environment variables
+Create a .env file in the root directory:
 
-Create a .env file in the root directory with the following:
+env
+Copy
+Edit
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-
-Start the server:
+4. Run the server
+bash
+Copy
+Edit
 npm start
-Server will run at: http://localhost:5000
+Server runs at: http://localhost:5000
 
-Deployed Version
-Hosted on Render:
-Base URL: https://bright-champs-assignment.onrender.com
+🌐 Deployed Version
+The backend is deployed using Render.
 
-API Endpoints
-Register a new user
+🔗 Base URL: https://bright-champs-assignment.onrender.com
+
+📮 API Endpoints
+🔸 Register a new user
 POST /api/auth/register
-Body: { "name": "John Doe", "email": "john@example.com", "password": "password123" }
+Body:
 
-Login
+json
+Copy
+Edit
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+🔸 Login
 POST /api/auth/login
-Body: { "email": "john@example.com", "password": "password123" }
+Body:
 
-Reset Password
+json
+Copy
+Edit
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+🔸 Reset Password
 POST /api/auth/reset-password
-Body: { "email": "john@example.com" }
+Body:
 
-Notes
-All inputs are validated using express-validator
+json
+Copy
+Edit
+{
+  "email": "john@example.com"
+}
+📝 Notes
+Inputs are validated using express-validator.
 
-Passwords are securely hashed using bcryptjs
+Passwords are hashed using bcryptjs before storage.
 
-JWT is used for secure session handling
+JWT is used to generate and validate secure tokens.
 
-Easily extendable with protected routes and email functionality
+The backend is fully modular and scalable.
 
-License
-MIT
+📄 License
+This project is licensed under the MIT License.
 
+yaml
+Copy
+Edit
+
+---
+
+✅ Just replace `YOUR_USERNAME` in the GitHub link if needed, paste this into `README.md`, and your repo will look professional and clean!
+
+Let me know if you want to add a frontend or protected routes section!
